@@ -1,0 +1,25 @@
+/** Supported languages: code (API), display name, and speech-synthesis locale. */
+const LANGUAGES = [
+  { code: "ar",    name: "Arabic",              speech: "ar-SA" },
+  { code: "zh-CN", name: "Chinese (Simplified)", speech: "zh-CN" },
+  { code: "nl",    name: "Dutch",               speech: "nl-NL" },
+  { code: "en",    name: "English",             speech: "en-GB" },
+  { code: "fr",    name: "French",              speech: "fr-FR" },
+  { code: "de",    name: "German",              speech: "de-DE" },
+  { code: "el",    name: "Greek",               speech: "el-GR" },
+  { code: "ha",    name: "Hausa",               speech: "ha" },
+  { code: "hi",    name: "Hindi",               speech: "hi-IN" },
+  { code: "ig",    name: "Igbo",                speech: "ig" },
+  { code: "id",    name: "Indonesian",          speech: "id-ID" },
+  { code: "it",    name: "Italian",             speech: "it-IT" },
+  { code: "ja",    name: "Japanese",            speech: "ja-JP" },
+  { code: "ko",    name: "Korean",              speech: "ko-KR" },
+  { code: "pl",    name: "Polish",              speech: "pl-PL" },
+  { code: "pt",    name: "Portuguese",          speech: "pt-PT" },
+  { code: "ru",    name: "Russian",             speech: "ru-RU" },
+  { code: "es",    name: "Spanish",             speech: "es-ES" },
+  { code: "sw",    name: "Swahili",             speech: "sw-KE" },
+  { code: "tr",    name: "Turkish",             speech: "tr-TR" },
+  { code: "uk",    name: "Ukrainian",           speech: "uk-UA" },
+  { code: "yo",    name: "Yoruba",              speech: "yo" }
+];

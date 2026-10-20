@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Translate text between more than 20 languages, with copy and listen options.">
+  <title>Lingua | Language Translation Tool</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+      <span>Lingua</span>
+    </div>
+    <p class="tagline">Language Translation Tool</p>
+  </header>
+
+  <main class="container">
+    <h1>Translate anything, instantly.</h1>
+    <p class="lead">Type or paste your text, choose the languages, and get a clear translation.</p>
+
+    <section class="translator" aria-label="Translator">
+      <div class="lang-bar">
+        <div class="field">
+          <label for="sourceLang">From</label>
+          <select id="sourceLang"></select>
+        </div>
+        <button id="swapBtn" class="icon-btn swap" type="button" aria-label="Swap languages" title="Swap languages">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4 3 8l4 4"/><path d="M3 8h14"/><path d="m17 20 4-4-4-4"/><path d="M21 16H7"/></svg>
+        </button>
+        <div class="field">
+          <label for="targetLang">To</label>
+          <select id="targetLang"></select>
+        </div>
+      </div>
+
+      <div class="panels">
+        <div class="panel">
+          <label class="sr-only" for="inputText">Text to translate</label>
+          <textarea id="inputText" placeholder="Enter text to translate" spellcheck="true"></textarea>
+          <div class="panel-footer">
+            <span id="charCount" class="muted">0 / 500</span>
+            <div class="actions">
+              <button id="clearBtn" class="text-btn" type="button">Clear</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel output">
+          <div id="outputText" class="output-text" aria-live="polite" data-placeholder="Your translation will appear here"></div>
+          <div class="panel-footer">
+            <span id="status" class="muted" role="status"></span>
+            <div class="actions">
+              <button id="speakBtn" class="icon-btn" type="button" aria-label="Listen to translation" title="Listen" disabled>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/></svg>
+              </button>
+              <button id="copyBtn" class="icon-btn" type="button" aria-label="Copy translation" title="Copy" disabled>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="error" class="error" role="alert" hidden></div>
+
+      <div class="submit-row">
+        <span class="muted hint">Tip: press Ctrl + Enter to translate</span>
+        <button id="translateBtn" class="primary" type="button">
+          <span class="btn-label">Translate</span>
+          <span class="spinner" aria-hidden="true"></span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built with HTML, CSS and JavaScript. Translations by MyMemory API (Google Translate API supported).</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="languages.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
